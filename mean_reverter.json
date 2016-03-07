@@ -1,0 +1,42 @@
+{
+    "Events" : [
+        [
+            "random_up",
+            {
+                "X" : 1
+            }
+        ],
+        [
+            "random_down",
+            {
+                "X" : -1
+            }
+        ],
+        [
+            "-revert_up * X",
+            {
+                "X" : 1
+            }
+        ],
+        [
+            "revert_down * X",
+            {
+                "X" : -1
+            }
+        ]
+    ],
+    "Filename" : "mean_reverter.json",
+    "InitialConditions" : {
+        "X" : 0
+    },
+    "Parameters" : {
+        "random_down" : "1",
+        "random_up" : "1",
+        "revert_down" : 0.001,
+        "revert_up" : 0.1
+    },
+    "States" : [
+        "X"
+    ],
+    "default_algorithm" : "gillespie"
+}

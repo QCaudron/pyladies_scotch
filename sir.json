@@ -1,0 +1,35 @@
+{
+    "States" : [
+        "S",
+        "I",
+        "R"
+    ],
+
+    "InitialConditions" : {
+        "S" : 99,
+        "I" : 1,
+        "R" : 0
+    },
+
+    "Parameters" : {
+        "r0" : "18",
+        "gamma" : "1/14"
+    },
+
+    "Events" : [
+        [
+            "r0 * gamma * S * I / (S+I+R)",
+            {
+                "S" : -1,
+                "I" : 1
+            }
+        ],
+        [
+            "gamma * I",
+            {
+                "I" : -1,
+                "R" : 1
+            }
+        ]
+    ]
+}
